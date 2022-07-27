@@ -8,6 +8,7 @@
 body{
     width: 1440px;
     margin: 0 auto;
+    background-color:#F2F4FC;
 }
 
 .nav-bar, 
@@ -15,6 +16,21 @@ body{
     width: 1100px;
     margin: 70px auto;
 }
+
+
+@media only screen and (max-width: 850px) {
+    body{
+        width: 750px;
+        margin: 0 auto;
+        border: solid;
+    }
+    .nav-bar,
+    .main{
+        width: 700px;
+        margin: 20px auto;
+    }
+}
+
 
 .nav-bar{
     display: flex;
@@ -58,4 +74,42 @@ body{
     align-content: center;
     align-items: center;
     background-color: #072AC8;
+}
+.main{
+    display: flex;
+}
+
+.title{
+    width: 530px;
+    font-weight: 700;
+    font-size: 60px;
+    color: #292E47;
+}
+
+.subtitle{
+    width: 435px;
+    font-weight: 400;
+    font-size: 20px;
+    color: #6B708D;
+}
+.box-section{
+    display: flex;
+}
+.button-see-work{
+    font-size: 17px;
+    font-weight: 500;
+    color: #6B708D;
+    width: 150px;
+    height: 52px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+}
+
+.hero-image{
+    width: 570px;
+    height: 637px;
 }
