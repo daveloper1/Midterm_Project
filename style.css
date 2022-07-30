@@ -4,30 +4,32 @@
   font-family: Roboto, sans-serif;
 }
 
+html,
 body {
-  width: 750px;
+  margin:0;
+  padding:0;
+  overflow-x:hidden;
+}
+
+body {
+  width: 390px;
   margin: 0 auto;
   background-color: #f2f4fc;
   border: solid;
 }
 
-.main{
-  width: 700px;
-  margin: 100px auto;
-}
 
 .nav-bar {
-  margin: 70px auto;
-  width: 700px;
+  margin: 50px 20px;
   display: flex;
-  flex-flow: row nowrap; /* flex direction && flex wrap*/
+  flex-flow: row nowrap; 
   justify-content: space-between;
   align-items: center;
 }
 
 .menu {
-  width: 295px;
-  font-size: 17px;
+  width: 165px;
+  font-size: 14px;
   font-weight: 500;
   color: #6b708d;
 }
@@ -48,12 +50,12 @@ body {
 }
 
 .button-box {
-  font-size: 17px;
+  font-size: 14px;
   color: white;
-  width: 125px;
+  width: 100px;
   height: 52px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-direction: row;
   flex-wrap: nowrap;
   align-content: center;
@@ -62,28 +64,41 @@ body {
 }
 
 .main {
+  /*width: 310px;*/
+  margin: 20px auto;
   display: flex;
+  flex-flow: column;
+}
+
+.home{
+  margin: 10px auto;
 }
 
 .title {
-  width: 320px;
+  /*width: 320px;*/
+  margin: 0 20px;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 45px;
   color: #292e47;
 }
 
 .subtitle {
-  width: 326px;
+  /*width: 326px;*/
+  margin: 20px 20px;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 16px;
   color: #6b708d;
+  line-height: 25px;
 }
 .box-section {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto 10px;
 }
 
 .button-see-work {
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 500;
   color: #6b708d;
   width: 150px;
@@ -104,21 +119,22 @@ body {
 
 .hero-image {
   position: relative;
-  left: 0;
-  top: 0;
-  width: 350px;
+  left: 30px;
+  top: 10px;
+  width: 320px;
   margin: 0;
 }
-
 .top-card {
-  width: 120px;
+  visibility: hidden;
+  width: 190px;
   position: absolute;
   left: 0;
   top: 25px;
 }
 
 .bottom-card {
-  width: 120px;
+  visibility: hidden;
+  width: 190px;
   position: absolute;
   right: 0;
   bottom: -13px;
@@ -128,65 +144,164 @@ body {
   filter: grayscale(100%);
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-content: center;
   justify-content: space-around;
   align-items: center;
-  margin: 130px auto;
+  margin: 70px auto;
 }
 .client img{
-  width: 70px;
+  width: 50px;
 }
+.recent-projects{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: space-between;
+  justify-content: center;
+  align-items: center;
+}
+.project-section h3{
+  font-weight: 700;
+  font-size: 30px;
+  color:#292E47;
+  margin: 30px  auto;
+  padding: 0 20px;
+}
+
+.project{
+  padding: 0px 0px ;
+  margin: 0px  auto;
+  background-color: white;
+  height:500px ;
+}
+.project img{
+  width: 390px;
+  height: 290px;
+  margin: 0px auto;
+}
+
+.project-title{
+  margin: 20px auto;
+  padding: 0 20px;
+  font-weight: 700;
+  font-size: 20px;
+  color:#292E47;
+}
+
+.project-description{
+  margin: 10px 0px 50px 0px;
+  padding: 0px 20px;
+  font-size: 17px;
+  color:#6B708D;
+  font-weight: 400;
+}
+
+.project-link{
+  font-size: 17px;
+  font-weight: 400;
+  margin: 20px auto;
+  padding: 0 20px;
+  color: #072AC8;
+  text-decoration: none;
+}
+
+
+
 
 /*-----------------------------------------------------*/
 
-@media only screen and (min-width: 850px) {
+@media only screen and (min-width: 450px) {
   body {
     width: 1440px;
     margin: 0 auto;
   }
 
   .main,
-  .client {
+  .client,
+  .project-section {
     width: 1100px;
     margin: 100px auto;
   }
-
+  
   .nav-bar {
     margin: 70px auto;
     width: 1100px;
   }
- 
+  .menu{
+    width: 295px;
+    font-size: 17px;
+  }
   .button-box {
     width: 150px;
+    font-size: 17px;
+  }
+
+  .main{
+    display: flex;
+    flex-flow: row;
   }
 
   .title {
     width: 530px;
+    height: 210px;
     font-size: 60px;
+    margin: 0 auto;
   }
 
   .subtitle {
     width: 435px;
+    height: 90px;
     font-size: 20px;
+    line-height: normal;
+    margin: 30px 0;    
   }
   .box-section {
     display: flex;
+    margin: 70px auto;
+    justify-content: flex-start;
+  }
+  .button-see-work{
+    font-size: 17px;
+    margin: 0 40px;
   }
 
   .hero-image {
     width: 570px;
+    left: 0;
+    top: 0;
   }
 
-  .top-card {
-    width: 190px;
-  }
-
+  .top-card,
   .bottom-card {
-    width: 190px;
+    visibility: visible;
   }
 
   .client img{
-    width: 100px;
+    width: 130px;
+    margin: 130px auto;
+  }
+  .recent-projects{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .project-section h3{
+    font-size: 40px;
+    margin:20px auto;
+    padding:0;
+  }
+  .project{
+    height:450px;
+    margin: 0;
+    padding: 0;
+  }
+  .project img{
+    width: 340px;
+    height: 240px;
+    margin: 0 auto;
+  }
+  .project-title{
+    font-size: 24px;
   }
 }
