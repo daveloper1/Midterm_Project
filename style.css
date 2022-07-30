@@ -6,9 +6,9 @@
 
 html,
 body {
-  margin:0;
-  padding:0;
-  overflow-x:hidden;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 body {
@@ -18,11 +18,10 @@ body {
   border: solid;
 }
 
-
 .nav-bar {
   margin: 50px 20px;
   display: flex;
-  flex-flow: row nowrap; 
+  flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -70,7 +69,7 @@ body {
   flex-flow: column;
 }
 
-.home{
+.home {
   margin: 10px auto;
 }
 
@@ -150,10 +149,10 @@ body {
   align-items: center;
   margin: 70px auto;
 }
-.client img{
+.client img {
   width: 50px;
 }
-.recent-projects{
+.recent-projects {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -161,57 +160,120 @@ body {
   justify-content: center;
   align-items: center;
 }
-.project-section h3{
+.project-section h3 {
   font-weight: 700;
   font-size: 30px;
-  color:#292E47;
-  margin: 30px  auto;
+  color: #292e47;
+  margin: 30px auto;
   padding: 0 20px;
 }
 
-.project{
-  padding: 0px 0px ;
-  margin: 0px  auto;
+.project {
+  padding: 0px 0px;
+  margin: 0px auto;
   background-color: white;
-  height:500px ;
+  height: 500px;
 }
-.project img{
+.project img {
   width: 390px;
   height: 290px;
   margin: 0px auto;
 }
 
-.project-title{
+.project-title {
   margin: 20px auto;
   padding: 0 20px;
   font-weight: 700;
   font-size: 20px;
-  color:#292E47;
+  color: #292e47;
 }
 
-.project-description{
+.project-description {
   margin: 10px 0px 50px 0px;
   padding: 0px 20px;
   font-size: 17px;
-  color:#6B708D;
+  color: #6b708d;
   font-weight: 400;
 }
 
-.project-link{
+.project-link {
   font-size: 17px;
   font-weight: 400;
   margin: 20px auto;
   padding: 0 20px;
-  color: #072AC8;
+  color: #072ac8;
   text-decoration: none;
 }
 
+.testimony-section{
+  display: flex;
+  flex-direction: column;
+  background-color: #292E47;
+  background-image: url(/Midterm_Project/project-assets/testimonial-section/orbit.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  height: 600px;
+}
+.first-avatar,
+.last-avatar{
+  display: flex;
+  justify-content: space-around;
+}
+.first-avatar img,
+.last-avatar img{
+  width: 100px;
+}
 
+.testimony-body{
+  margin: 20px auto;
+  padding: 0 20px;
+  display: flex;
+  height: 700px;
+  border: solid;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.testimony-body h3{
+  color: #F4F6FC;
+  font-weight: 700;
+}
+.testimony-body q{
+  color: #FFC600;
+  font-size: 17px;
+}
+.profile{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+
+}
+.profile-info{
+  display: flex;
+  flex-direction: column;
+}
+
+.profile img{
+  width: 50px;
+  height: 50px;
+}
+.profile-info-name{
+  color: #A2D6F9;
+  font-size: 17px;
+  margin: 0 auto;
+}
+.profile-info-web{
+  font-size: 15px;
+  margin: 0 auto;
+
+}
 
 
 /*-----------------------------------------------------*/
 
-@media only screen and (min-width: 450px) {
+@media only screen and (min-width: 650px) {
   body {
     width: 1440px;
     margin: 0 auto;
@@ -223,12 +285,12 @@ body {
     width: 1100px;
     margin: 100px auto;
   }
-  
+
   .nav-bar {
     margin: 70px auto;
     width: 1100px;
   }
-  .menu{
+  .menu {
     width: 295px;
     font-size: 17px;
   }
@@ -237,7 +299,7 @@ body {
     font-size: 17px;
   }
 
-  .main{
+  .main {
     display: flex;
     flex-flow: row;
   }
@@ -254,14 +316,14 @@ body {
     height: 90px;
     font-size: 20px;
     line-height: normal;
-    margin: 30px 0;    
+    margin: 30px 0;
   }
   .box-section {
     display: flex;
     margin: 70px auto;
     justify-content: flex-start;
   }
-  .button-see-work{
+  .button-see-work {
     font-size: 17px;
     margin: 0 40px;
   }
@@ -277,31 +339,31 @@ body {
     visibility: visible;
   }
 
-  .client img{
+  .client img {
     width: 130px;
     margin: 130px auto;
   }
-  .recent-projects{
+  .recent-projects {
     flex-direction: row;
     justify-content: space-between;
   }
 
-  .project-section h3{
+  .project-section h3 {
     font-size: 40px;
-    margin:20px auto;
-    padding:0;
+    margin: 20px auto;
+    padding: 0;
   }
-  .project{
-    height:450px;
+  .project {
+    height: 450px;
     margin: 0;
     padding: 0;
   }
-  .project img{
+  .project img {
     width: 340px;
     height: 240px;
     margin: 0 auto;
   }
-  .project-title{
+  .project-title {
     font-size: 24px;
   }
 }
