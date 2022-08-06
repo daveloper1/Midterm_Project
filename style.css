@@ -271,11 +271,26 @@ body {
 }
 
 .icon{
-  width: 80px;
-  height: 80px;
+  width: 40px;
+  /*height: 40px;*/
+}
+.service{
+  height: 380px;
+  width: 340px;
 }
 
-
+.service div{
+  width: 80px;
+  height: 80px;
+  margin: 40px 30px 30px 30px ;
+  border-radius: 100%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #ECF7FF;
+}
 /*-----------------------------------------------------*/
 
 @media only screen and (min-width: 650px) {
@@ -415,8 +430,13 @@ body {
     padding: 0 0 0 10px;
   }
   .icon{
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    /*height: 40px;*/
   }
+  .service{
+    height: 380px;
+    width: 340px;
+  }
+
 }
 
