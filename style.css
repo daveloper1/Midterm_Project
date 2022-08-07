@@ -17,13 +17,19 @@ body {
   background-color: #f2f4fc;
   border: solid;
 }
-
-.nav-bar {
+.textarea{
+  font-size: 17px;
+}
+.nav-bar,
+.footer {
   margin: 50px 20px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+}
+.logo-circle img{
+  width: 60px;
 }
 
 .menu {
@@ -81,11 +87,9 @@ body {
   color: #292e47;
 }
 
-.subtitle {
-  /*width: 326px;*/
+.home-description {
   margin: 20px 20px;
   font-weight: 400;
-  font-size: 16px;
   color: #6b708d;
   line-height: 25px;
 }
@@ -160,7 +164,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-.project-section h3 {
+.title-section {
   font-weight: 700;
   font-size: 30px;
   color: #292e47;
@@ -170,7 +174,8 @@ body {
 
 .project {
   padding: 0px 0px;
-  margin: 0px auto;
+  /*margin: 0px auto;*/
+  margin: 10px auto;
   background-color: white;
   height: 500px;
 }
@@ -191,7 +196,6 @@ body {
 .project-description {
   margin: 10px 0px 50px 0px;
   padding: 0px 20px;
-  font-size: 17px;
   color: #6b708d;
   font-weight: 400;
 }
@@ -205,10 +209,10 @@ body {
   text-decoration: none;
 }
 
-.testimony-section{
+.testimony-section {
   display: flex;
   flex-direction: column;
-  background-color: #292E47;
+  background-color: #292e47;
   background-image: url(/Midterm_Project/project-assets/testimonial-section/orbit.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -216,80 +220,155 @@ body {
   height: 450px;
 }
 .first-avatar,
-.last-avatar{
+.last-avatar {
   display: flex;
   justify-content: space-around;
 }
 .first-avatar img,
-.last-avatar img{
+.last-avatar img {
   width: 100px;
 }
 
-.testimony-body{
+.testimony-body {
   margin: 0px auto 30px auto;
   padding: 0 20px;
   display: flex;
-  /* height: 0px; */
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
-.testimony-body h3{
-  color: #F4F6FC;
+.testimony-body h3 {
+  color: #f4f6fc;
   font-weight: 700;
   font-size: 20px;
 }
-.testimony-body q{
-  color: #FFC600;
-  font-size: 17px;
+.testimony-body q {
+  color: #ffc600;
 }
-.profile{
+.profile {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 40px auto 0px auto
-
+  margin: 40px auto 0px auto;
 }
-.profile-info{
+.profile-info {
   display: flex;
   flex-direction: column;
 }
 
-.profile img{
+.profile img {
   width: 50px;
   height: 50px;
   border-radius: 100%;
 }
-.profile-info-name{
-  color: #A2D6F9;
-  font-size: 17px;
+.profile-info-name {
+  color: #a2d6f9;
   margin: 0 auto;
 }
-.profile-info-web{
+.profile-info-web {
   font-size: 15px;
   margin: 0 auto;
 }
 
-.icon{
+.icono {
   width: 40px;
   /*height: 40px;*/
 }
-.service{
+.service {
   height: 380px;
   width: 340px;
 }
 
-.service div{
+.service div {
   width: 80px;
   height: 80px;
-  margin: 40px 30px 30px 30px ;
+  margin: 40px 30px 30px 30px;
   border-radius: 100%;
   display: flex;
   flex-direction: row;
   align-content: center;
   justify-content: center;
   align-items: center;
-  background-color: #ECF7FF;
+  background-color: #ecf7ff;
+}
+.cta-section {
+  background-color: #ffc600;
+  height: 450px;
+}
+
+.cta-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cta-container h3 {
+  text-align: center;
+}
+
+.subscribe-section {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.email {
+  height: 52px;
+  width: 200px;
+  margin: 30px 0;
+  background-image: url(/Midterm_Project/project-assets/newsletter/icon/mail.svg);
+  background-repeat: no-repeat;
+  background-position: 20px;
+  padding-left: 76px;
+  border: none;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.first-footer {
+  width: 350px;
+  height: 90px;
+  color: #6B708D;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+}
+  
+.second-footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 60px;
+  align-content: space-around;
+  justify-content: center;
+  align-items: center;
+}
+
+.second-footer div {
+  width: 100px;
+  text-align:left;
+  color: #6B708D;
+}
+.subtitle-date{
+  font-size: 20px;
+  color: #6B708D;  
+  padding: 10px;
+  
+}
+.simplify-body img{
+  width: 390px;
+}
+.simplify-body p{
+  padding: 10px;
+  text-align: justify;
+  line-height: 25px;
 }
 /*-----------------------------------------------------*/
 
@@ -301,15 +380,28 @@ body {
 
   .main,
   .client,
-  .project-section {
+  .project-section,
+  .footer {
     width: 1100px;
     margin: 100px auto;
   }
 
+  .cta-section,
+  .testimony-section {
+    width: 1320px;
+    margin: 0 auto;
+  }
+  .textarea{
+    font-size: 20px;
+  }
   .nav-bar {
     margin: 70px auto;
     width: 1100px;
   }
+  .logo-circle img{
+    width: 100px;
+  }
+  
   .menu {
     width: 295px;
     font-size: 17px;
@@ -331,10 +423,9 @@ body {
     margin: 0 auto;
   }
 
-  .subtitle {
+  .home-description {
     width: 435px;
     height: 90px;
-    font-size: 20px;
     line-height: normal;
     margin: 30px 0;
   }
@@ -386,57 +477,105 @@ body {
   .project-title {
     font-size: 24px;
   }
-  .testimony-section{
+  .project-description {
+    font-size: 20px;
+  }
+  .project-link {
+    font-size: 20px;
+  }
+  .testimony-section {
     display: flex;
     flex-direction: row;
-    width: 1320px;
     height: 622px;
     margin: 0px auto;
     align-items: stretch;
   }
-  
+
   .first-avatar,
-  .last-avatar{
+  .last-avatar {
     width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   .first-avatar img,
-  .last-avatar img{
+  .last-avatar img {
     width: 150px;
     margin: 20px auto;
   }
-  .testimony-body{
+  .testimony-body {
     display: flex;
     height: 622px;
-    width: 1100px;
     align-items: center;
     justify-content: space-evenly;
   }
-  .testimony-body h3{
+  .testimony-body h3 {
     font-size: 40px;
     text-align: center;
     padding: 40px 0 0 0;
   }
-  .testimony-body q{
+  .testimony-body q {
     font-size: 24px;
     text-align: center;
   }
-  .profile{
+  .profile {
     padding: 0 10px 40px 0;
   }
-  .profile-info{
+  .profile-info {
     padding: 0 0 0 10px;
   }
-  .icon{
+  .icono {
     width: 40px;
-    /*height: 40px;*/
   }
-  .service{
+  .service {
     height: 380px;
     width: 340px;
   }
+  .cta-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+  .title-section {
+    font-size: 40px;
+  }
+  .cta-container,
+  .subscribe-section{
+    display: flex;
+    width: 1100px;
+  }
+  /*.cta-container p {
+    font-size: 20px;
+  }*/
+  .subscribe-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .email {
+    margin: 0 20px;
+    font-size: 17px;
+  }
+  .footer{
+    display: flex;
+    flex-direction: row;
+  }
+  .first-footer{
+    display: flex;
+    align-items: flex-start;
+    height: 120px;
+    width: 270px;
+  }
+  .second-footer{
+    display: flex;
+    flex-wrap: wrap;
+    height: 120px;
+    width: 500px;
+  }
+  .second-footer div {
+    width: 150px
+  };
 
 }
-
