@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="project-assets/testimonial-section/memoji-4.png" />
     <title>Homepage</title>
   </head>
 
@@ -11,21 +12,20 @@
     <header>
       <nav class="nav-bar">
         <div class="logo-circle">
-          <img
-            src="project-assets/logos/circle.svg"
-            alt="Circle Logo"
-          />
+          <img src="project-assets/logos/circle.svg" alt="Circle Logo" />
         </div>
 
         <div class="menu">
           <ul>
-            <li>Home</li>
-            <li>Projects</llogaritmii>
-            <li>Services</li>
+            <li><a href="/Home.html">Home</a></li>
+            <li><a href="/ProjectPage.html">Projects</a></li>
+            <li><a href="/Home.html">Services</a></li>
           </ul>
         </div>
 
-        <div class="button-box contactUsBtn">Contact Us</div>
+        <div class="button-box contactUsBtn">
+          <a href="/Contact.html">Contact Us</a>
+        </div>
       </nav>
     </header>
 
@@ -63,26 +63,23 @@
     </article>
 
     <section class="client">
-      <img
-        src="project-assets/logos/airbnb-logo.svg"
-        alt="airbnb logo"
-      />
-      <img
-        src="project-assets/logos/google-logo.svg"
-        alt="Google logo"
-      />
-      <img
-        src="project-assets/logos/microsoft-logo.svg"
-        alt="Microsoft logo"
-      />
-      <img
-        src="project-assets/logos/fedex-logo.svg"
-        alt="FedEx logo"
-      />
-      <img
-        src="project-assets/logos/amazon-logo.svg"
-        alt="amazon logo"
-      />
+      <a href="https://www.airbnb.es/?from_belo_click"
+        ><img src="project-assets/logos/airbnb-logo.svg" alt="airbnb logo"
+      /></a>
+      <a href="https://www.google.com/"
+        ><img src="project-assets/logos/google-logo.svg" alt="Google logo"
+      /></a>
+      <a href="https://www.microsoft.com/es-es/"
+        ><img
+          src="project-assets/logos/microsoft-logo.svg"
+          alt="Microsoft logo"
+      /></a>
+      <a href="https://www.fedex.com/es-es/home.html"
+        ><img src="project-assets/logos/fedex-logo.svg" alt="FedEx logo"
+      /></a>
+      <a href="https://www.amazon.es/"
+        ><img src="project-assets/logos/amazon-logo.svg" alt="amazon logo"
+      /></a>
     </section>
 
     <article class="project-section">
@@ -98,7 +95,7 @@
           <p class="project-description textarea">
             UI Design & App Development
           </p>
-          <a class="project-link" href="">Learn more</a>
+          <a onclick="RedirectProject" class="project-link">Learn more</a>
         </section>
         <section class="project">
           <img
@@ -110,7 +107,7 @@
           <p class="project-description textarea">Web Development</p>
           <a class="project-link" href="">Learn more</a>
         </section>
-        <section class="project">
+        <label class="project">
           <img
             class="project-img"
             src="project-assets/projects-section/3.jpg"
@@ -118,8 +115,8 @@
           />
           <h4 class="project-title">Vectorify</h4>
           <p class="project-description textarea">User Experience Design</p>
-          <a class="project-link" href="">Learn more</a>
-        </section>
+          <a class="project-link" href="/Project.html">Learn more</a>
+        </label>
       </section>
     </article>
 
@@ -238,10 +235,7 @@
     <article class="footer">
       <section class="first-footer">
         <div class="logo-circle">
-          <img
-            src="project-assets/logos/circle.svg"
-            alt="Circle Logo"
-          />
+          <img src="project-assets/logos/circle.svg" alt="Circle Logo" />
         </div>
         <div class="address">
           <p>2972 Westheimer Rd. Santa Ana, Illinois 85486</p>

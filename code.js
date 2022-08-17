@@ -20,21 +20,21 @@ function getFormData() {
 }
 
 function redirectContacUs() {
-  window.location.replace("http://stackoverflow.com");
-  /*console.log("hoolaaaa");*/
+  /*window.location.replace("http://stackoverflow.com");*/
+  console.log("hoolaaaa");
 }
 
 window.addEventListener("load", () => {
-  const contactUsBtn = document.getElementsByClassName("contactUsBtn");
-  let arrContactUsBtn = [...contactUsBtn];
-  /*contactUsBtn.addEventListener("click", redirectContacUs);*/
-  console.log(arrContactUsBtn);
-  for (let i = 0; i < arrContactUsBtn.length; i++) {
-    arrContactUsBtn[i].addEventListener("click", redirectContacUs);
-  }
+  /*The idea is to redirect the user to the contactus page with the email already written */
   const subscribeBtn = document.getElementsByClassName("subscribeBtn");
   let subscribeBtnarr = [...subscribeBtn];
   for (let i = 0; i < subscribeBtnarr.length; i++) {
     subscribeBtnarr[i].addEventListener("click", redirectContacUs);
   }
+
+  $(".project-link").click(function() {
+    console.log('AJAAAA')
+    window.location = $(this).find("a").attr("href"); 
+    return false;
+  });
 });
