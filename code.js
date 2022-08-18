@@ -24,6 +24,13 @@ function redirectContacUs() {
   console.log("hoolaaaa");
 }
 
+function redirectProject() {
+  console.log("aaaaaaaaaaaaaa");
+  const newLocation = this.querySelector('a').getAttribute("href");
+  window.location = newLocation;
+  
+}
+
 window.addEventListener("load", () => {
   /*The idea is to redirect the user to the contactus page with the email already written */
   const subscribeBtn = document.getElementsByClassName("subscribeBtn");
@@ -32,9 +39,17 @@ window.addEventListener("load", () => {
     subscribeBtnarr[i].addEventListener("click", redirectContacUs);
   }
 
-  $(".project-link").click(function() {
-    console.log('AJAAAA')
-    window.location = $(this).find("a").attr("href"); 
+  const projectCard = document.getElementsByClassName("project");
+  let projectCardArr = [...projectCard];
+
+  for (let i = 0; i < projectCardArr.length; i++) {
+    projectCardArr[i].addEventListener("click", redirectProject);
+  }
+
+  /*
+  $(".project-link").click(function () {
+    console.log("AJAAAA");
+    window.location = $(this).find("a").attr("href");
     return false;
-  });
+  });*/
 });
