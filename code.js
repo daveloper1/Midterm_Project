@@ -19,9 +19,16 @@ function getFormData() {
   }
 }
 
-function redirectContacUs() {
-  /*window.location.replace("http://stackoverflow.com");*/
-  console.log("hoolaaaa");
+function SubscribeFcn() {
+  const userEmail = document.querySelector(".email");
+  if (!userEmail.value.includes("@")) {
+    alert("The introduced email is not valid. Please try again.");
+    window.location=window.location;
+    window.location.href='#cta-section';
+    /*userEmail.scrollIntoView();*/
+  } else {
+    window.confirm(userEmail);
+  }
 }
 
 function getParams() {
@@ -75,13 +82,6 @@ function QueryPage(params) {
 }
 
 window.addEventListener("load", () => {
-  /*The idea is to redirect the user to the contactus page with the email already written */
-  const subscribeBtn = document.getElementsByClassName("subscribeBtn");
-  let subscribeBtnarr = [...subscribeBtn];
-  for (let i = 0; i < subscribeBtnarr.length; i++) {
-    subscribeBtnarr[i].addEventListener("click", redirectContacUs);
-  }
-  /*----------------------------------------------------------------------------*/
   const projectCard = document.getElementsByClassName("project");
   let projectCardArr = [...projectCard];
 
@@ -96,4 +96,11 @@ window.addEventListener("load", () => {
     console.log(params.subtitle);*/
     QueryPage(params);
   }
+
+  /*
+  const subscribeBtn = document.getElementsByClassName("subscribeBtn");
+  let subscribeBtnarr = [...subscribeBtn];
+  for (let i = 0; i < subscribeBtnarr.length; i++) {
+    subscribeBtnarr[i].addEventListener("click", SubscribeFcn);
+  }*/
 });
