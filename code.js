@@ -1,38 +1,65 @@
 function getFormData() {
+  /*This function will get the user information to be able to contact them via email OR phone.*/
   let nameExist = true;
   const uName = document.querySelector(".user-name").value;
   const uEmail = document.querySelector(".user-email").value;
   const uPhone = document.querySelector(".user-phone").value;
   const uMessage = document.querySelector(".user-message").value;
-
-  if (uName == "" || (uEmail == "" && uPhone == "")) {
+  //console.log(isValidPhone(uPhone));
+  if (uName == "" || (!isValidEmail(uEmail) && !isValidPhone(uPhone))) {
     nameExist = false;
     console.error(
-      "You have to introduce the Full name and email or phone number to contact you. :) "
+      "You have to introduce the full name and email or phone number to contact you. :) "
     );
-    alert("nnnoooooooo");
+    alert(
+      "You have to introduce the full name and email or phone number to contact you. :) "
+    );
   } else {
     console.log(
       "Thank you for your message, we will contact you as soon as possible!"
     );
-    alert("suuuuuu");
+    alert(
+      "Thank you for your message, we will contact you as soon as possible!"
+    );
   }
 }
 
 function SubscribeFcn() {
+  /*This function will get the email of the user to subscribe him/her. It checks if the email is valid.*/
   const userEmail = document.querySelector(".email");
-  if (!userEmail.value.includes("@")) {
+  if (!isValidEmail(userEmail.value)) {
     alert("The introduced email is not valid. Please try again.");
-    window.location=window.location;
-    window.location.href='#cta-section';
+    window.location = window.location;
+    window.location.href = "#cta-section";
     /*userEmail.scrollIntoView();*/
   } else {
-    window.confirm(userEmail);
+    //console.log(userEmail.value);
+    window.confirm(userEmail.value);
   }
 }
-
-function getParams() {
-  console.log("ueeee");
+function isValidPhone(phoneNumber) {
+  /*This function validates the phone number available in spain (or that's the idea) */
+  
+  //debug
+  /*console.log(phoneNumber);
+  console.log(phoneNumber.length == 9);
+  console.log(!(phoneNumber.toLowerCase() != phoneNumber.toUpperCase()));*/
+  return (
+    phoneNumber &&
+    phoneNumber.length == 9 &&
+    !(phoneNumber.toLowerCase() != phoneNumber.toUpperCase())
+  );
+}
+function isValidEmail(email) {
+  /*This function validates the email address*/
+  let isValid = false;
+  if (!email) {
+    return isValid;
+  } else if (email.includes("@")) {
+    let org = email.split("@")[1]; // get the second part of the email
+    isValid = org.includes(".") ? true : false;
+  }
+  return isValid;
 }
 
 function redirectProject() {
@@ -75,7 +102,7 @@ function QueryPage(params) {
   }
 
   const imageBox = document.getElementsByClassName("image-title")[0];
-  console.log(imageBox.style);
+  //console.log(imageBox.style);
   imageBox.style.backgroundImage = `url(project-assets/projects-section/${imageSelector}.jpg)`;
   const bgImageBox = document.getElementsByClassName("image-title-bg")[0];
   bgImageBox.style.backgroundImage = `url(project-assets/projects-section/${imageSelector}.jpg)`;
@@ -96,11 +123,4 @@ window.addEventListener("load", () => {
     console.log(params.subtitle);*/
     QueryPage(params);
   }
-
-  /*
-  const subscribeBtn = document.getElementsByClassName("subscribeBtn");
-  let subscribeBtnarr = [...subscribeBtn];
-  for (let i = 0; i < subscribeBtnarr.length; i++) {
-    subscribeBtnarr[i].addEventListener("click", SubscribeFcn);
-  }*/
 });
