@@ -55,7 +55,7 @@ function isValidEmail(email) {
   let isValid = false;
   if (!email) {
     return isValid;
-  } else if (email.includes("@")) {
+  } else if (email.includes("@") && !email.includes(' ')) {
     let org = email.split("@")[1]; // get the second part of the email
     isValid = org.includes(".") ? true : false;
   }
